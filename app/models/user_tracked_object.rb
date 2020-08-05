@@ -1,0 +1,2 @@
+class UserTrackedObject < ApplicationRecord
+end

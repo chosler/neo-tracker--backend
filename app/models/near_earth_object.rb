@@ -1,0 +1,2 @@
+class NearEarthObject < ApplicationRecord
+end
