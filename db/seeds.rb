@@ -12,6 +12,7 @@ require "net/http"
 NearEarthObject.destroy_all
 User.destroy_all
 UserTrackedObject.destroy_all
+Comment.destroy_all
 
 api_key = ENV['nasa_open_api']
 info = URI.parse("https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=#{api_key}")
@@ -30,7 +31,7 @@ neo_info["near_earth_objects"].each do |neo|
 
     hazardous = neo["is_potentially_hazardous_asteroid"]
 
-    NearEarthObject.create(name: name, diameter_max: diameter_max, diameter_min: diameter_min, dist_from_earth: dist_from_earth, hazardous: hazardous)
+    NearEarthObject.where(name: name, diameter_max: diameter_max, diameter_min: diameter_min, dist_from_earth: dist_from_earth, hazardous: hazardous).first_or_create
 
 end
 

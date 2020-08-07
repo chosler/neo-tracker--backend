@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
+      resources :comments
       resources :user_tracked_objects
       resources :exoplanets
       resources :near_earth_objects
