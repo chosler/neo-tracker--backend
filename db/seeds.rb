@@ -37,8 +37,8 @@ end
 user1 = User.create(name: "Bob", profile_pic_url: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Macaca_sinica_-_01.jpg")
 user2 = User.create(name: 'Mike', profile_pic_url: '')
 
-exo1 = NearEarthObject.all.sample
-exo2 = NearEarthObject.all.sample
+neo1 = NearEarthObject.all.sample
+neo2 = NearEarthObject.all.sample
 
-user_tracked1 = UserTrackedObject.create(user_id: user1.id, neo_id: exo1.id)
-user_tracked2 = UserTrackedObject.create(user_id: user2.id, neo_id: exo2.id)
+user_tracked1 = UserTrackedObject.create(user_id: user1.id, near_earth_object_id: neo1.id)
+user_tracked2 = UserTrackedObject.create(user_id: user2.id, near_earth_object_id: neo2.id)

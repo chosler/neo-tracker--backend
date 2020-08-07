@@ -42,3 +42,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #hide API keys
 gem 'figaro'
+
+#serializers
+gem 'active_model_serializers'

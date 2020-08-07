@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_05_175855) do
+ActiveRecord::Schema.define(version: 2020_08_06_152604) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,8 +35,8 @@ ActiveRecord::Schema.define(version: 2020_08_05_175855) do
 
   create_table "user_tracked_objects", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "neo_id"
-    t.integer "exo_id"
+    t.integer "near_earth_object_id"
+    t.integer "exoplanet_id"
     t.string "comment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
