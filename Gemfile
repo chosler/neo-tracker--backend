@@ -45,3 +45,5 @@ gem 'figaro'
 
 #serializers
 gem 'active_model_serializers'
+
+gem "jwt", "~> 2.2"
