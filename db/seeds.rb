@@ -31,7 +31,21 @@ neo_info["near_earth_objects"].each do |neo|
 
     hazardous = neo["is_potentially_hazardous_asteroid"]
 
-    NearEarthObject.where(name: name, diameter_max: diameter_max, diameter_min: diameter_min, dist_from_earth: dist_from_earth, hazardous: hazardous).first_or_create
+    epo = neo["orbital_data"]["epoch_osculation"]
+
+    sma = neo["orbital_data"]["semi_major_axis"]
+
+    ecc = neo["orbital_data"]["eccentricity"]
+
+    inc = neo["orbital_data"]["inclination"]
+
+    anl = neo["orbital_data"]["ascending_node_longitude"]
+
+    pa = neo["orbital_data"]["perihelion_argument"]
+
+    ma = neo["orbital_data"]["mean_anomaly"]
+
+    NearEarthObject.where(name: name, diameter_max: diameter_max, diameter_min: diameter_min, dist_from_earth: dist_from_earth, hazardous: hazardous, epo: epo, sma: sma, ecc: ecc, inc: inc, anl: anl, pa: pa, ma: ma).first_or_create
 
 end
 

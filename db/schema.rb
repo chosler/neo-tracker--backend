@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_11_181352) do
+ActiveRecord::Schema.define(version: 2020_08_12_185813) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,13 @@ ActiveRecord::Schema.define(version: 2020_08_11_181352) do
     t.boolean "hazardous"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.float "epo"
+    t.float "sma"
+    t.float "ecc"
+    t.float "inc"
+    t.float "anl"
+    t.float "pa"
+    t.float "ma"
   end
 
   create_table "user_tracked_objects", force: :cascade do |t|
