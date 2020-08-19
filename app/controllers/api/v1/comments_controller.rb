@@ -29,7 +29,7 @@ class Api::V1::CommentsController < ApplicationController
     private
 
     def comm_params
-        params.permit(:user_id, :near_earth_object_id, :exoplanet_id, :comm_content)
+        params.permit(:user_id, :near_earth_object_id, :exoplanet_id, :comm_content, :likes)
     end
     
 end
